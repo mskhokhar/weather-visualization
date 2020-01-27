@@ -14,7 +14,7 @@ This prroject will be displaying the live weather of the world using different g
 
 # Technologies, Libraries, APIs:
 
-My project will use js, google weather api and d3/highcharts.
+My project will use js, vanillaDOM, weather api and d3/highcharts.
 
 # Implementation timeline:
 
