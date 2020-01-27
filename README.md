@@ -18,7 +18,7 @@ My project will use js, vanillaDOM, weather api and d3/highcharts.
 
 # Implementation timeline:
 
-Phase 1: Implement the weather comparison of different areas in city graphically.
+Phase 1: Setup all necessary modules, including getting webpack up and running.  
 
 Phase 2: Implement the weather comparison of different cities.
 
