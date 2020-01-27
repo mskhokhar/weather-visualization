@@ -26,3 +26,5 @@ Phase 3: Implement the weather comparisons of different states/provinces.
 
 
 # Wireframe:
+
+![wireframe](https://github.com/mskhokhar/weather-visualization/blob/master/wireframe.png)
