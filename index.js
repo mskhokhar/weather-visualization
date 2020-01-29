@@ -10,6 +10,35 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector("#countries").addEventListener("change", () => {
       populateCities();
     });
+    document.querySelector("#submit-city").addEventListener("click", () => {      
+      let cityId = document.getElementById("city-input").value;
+      fetchWeather(cityId);
+    });
+
+  var myChart = Highcharts.chart('container', {
+    chart: {
+      type: 'bar'
+    },
+    title: {
+      text: 'Fruit Consumption'
+    },
+    xAxis: {
+      categories: ['Apples', 'Bananas', 'Oranges']
+    },
+    yAxis: {
+      title: {
+        text: 'Fruit eaten'
+      }
+    },
+    series: [{
+      name: 'Jane',
+      data: [1, 0, 4]
+    }, {
+      name: 'John',
+      data: [5, 7, 3]
+    }]
+  });
+
 })
 
 const populateContinents = () => {
@@ -63,5 +92,17 @@ const populateCities = () => {
         }
       });
     }
+}
+
+const fetchWeather = (cityId) => {
+  let request = new XMLHttpRequest();
+  
+  request.open('GET', `http://api.openweathermap.org/data/2.5/forecast?appid=32414ff520ac014d5e93f3e467a66f39&id=${cityId}`, true)
+  console.log('hitting');
+  request.onload = function () {
+  let data = JSON.parse(this.response);
+  console.log('weather data', data)
+}
+request.send();
 }
 
