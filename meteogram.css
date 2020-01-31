@@ -35,3 +35,10 @@
 .highcharts-data-table tr:hover {
     background: #f1f7ff;
 }
+
+.weather-tiles{
+    display: flex;
+    max-width: 60%;
+    justify-content: space-evenly;
+    margin: auto;
+}
