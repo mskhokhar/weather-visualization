@@ -14,8 +14,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     document.querySelector("#submit-city").addEventListener("click", () => {      
       let cityId = document.getElementById("city-input").value;
+      let coord = document.getElementsByClassName(`city-${cityId}`)[0].dataset['dataCoord'];
+      console.log('element', document.getElementsByClassName(`city-${cityId}`));
       fetchWeather(cityId);
-      
+      fetchForecast(coord);
     });
 
 })
@@ -60,11 +62,14 @@ const populateCities = () => {
 
     let selected_country = document.getElementById("countries").value;
     if (selected_country) {
-        console.log('country',selected_country);
+      console.log('country',selected_country);
+      console.log('lat',cities[0].coord.lat);
         
       cities.forEach(city => {
         if (selected_country === city.country) {
           let opt = document.createElement("option");
+          opt.classList.add(`city-${city.id}`);
+          opt.dataset.dataCoord = `lat=${city.coord.lat}&lon=${city.coord.lon}`;
           opt.value = city.id;
           opt.innerHTML = city.name;
           select.appendChild(opt);
@@ -81,8 +86,22 @@ const fetchWeather = (cityId) => {
   
   request.onload = function () {
   // let data = JSON.parse(this.response);
-  console.log('weather data', this.responseXML)
+  // console.log('weather data', this.responseXML)
     window.meteogram = new Meteogram(this.responseXML, 'container');
+  }
+  request.send();
+
+}
+const fetchForecast = (coord) => {
+  let request = new XMLHttpRequest();
+  console.log('coord', coord);
+  
+  request.open('GET', ` http://api.weatherbit.io/v2.0/forecast/daily?key=0e739b00f5aa4e30a4e3e0c601e1b133&${coord}`, true);
+  console.log('hitting 2');
+  
+  request.onload = function () {
+  let data = JSON.parse(this.response);
+  console.log('weather data', data)
   }
   request.send();
 
