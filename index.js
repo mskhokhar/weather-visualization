@@ -1,6 +1,9 @@
-const Continents = require('./continets.json');
 const cities = require('./city.list.json')
-const cc_map = require('./contries-continents.json');
+window.cities = cities;
+
+const countries = require('./contry-codes.json');
+window.countries = countries;
+
 
 const fetchForecast = require('./util/weatherbit/fetchForecast');
 const fetchWeather = require('./util/openWeather/fetchWeather');
@@ -8,7 +11,6 @@ const fetchWeather = require('./util/openWeather/fetchWeather');
 require('./components/graphs/theme');
 require('./components/graphs/meteogram');
 
-// import {detailGraph} from './detailGraph';
 
 document.addEventListener('DOMContentLoaded', () => {
   populateCities();
