@@ -11,51 +11,46 @@ const detailGraph = (input) => {
         inputObject.data = element.values;
         inputArray.push(inputObject);
     });
-    Highcharts.chart('container-2', {
-        
+    Highcharts.chart('container', {
+        chart: {
+            type: 'packedbubble',
+            height: '100%'
+        },
         title: {
-            text: input.title
+            text: 'Carbon emissions around the world (2014)'
         },
-
-        subtitle: {
-            text: ''
+        tooltip: {
+            useHTML: true,
+            pointFormat: '<b>{point.name}:</b> {point.value}m CO<sub>2</sub>'
         },
-
-        yAxis: {
-            title: {
-                text: input.y_title
-            }
-        },
-        legend: {
-            layout: 'vertical',
-            align: 'right',
-            verticalAlign: 'middle'
-        },
-
         plotOptions: {
-            series: {
-                label: {
-                    connectorAllowed: false
+            packedbubble: {
+                minSize: '30%',
+                maxSize: '120%',
+                zMin: 0,
+                zMax: 1000,
+                layoutAlgorithm: {
+                    splitSeries: false,
+                    gravitationalConstant: 0.02
                 },
-                pointStart: input.pointStart
-            }
-        },
-        series: inputArray,
-
-        responsive: {
-            rules: [{
-                condition: {
-                    maxWidth: 500
-                },
-                chartOptions: {
-                    legend: {
-                        layout: 'horizontal',
-                        align: 'center',
-                        verticalAlign: 'bottom'
+                dataLabels: {
+                    enabled: true,
+                    format: '{point.name}',
+                    filter: {
+                        property: 'y',
+                        operator: '>',
+                        value: 250
+                    },
+                    style: {
+                        color: 'black',
+                        textOutline: 'none',
+                        fontWeight: 'normal'
                     }
                 }
-            }]
-        }
-
+            }
+        },
+        series: [
+            {},{}.{},{}
+        ]
     });
 }
