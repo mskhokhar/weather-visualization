@@ -1,3 +1,4 @@
+var dateFormat = require("dateformat");
 module.exports = (data) => {
 
     let forecastData = data.data;
@@ -14,7 +15,8 @@ module.exports = (data) => {
         icon.src = `https://www.weatherbit.io/static/img/icons/${forecast.weather.icon}.png`;
 
         let date = document.createElement('div');
-        date.innerText = forecast.valid_date;
+        let formattedDate = dateFormat(forecast.valid_date,"dddd, mmm d, yyyy")
+        date.innerText = formattedDate;
 
         let low_temp = document.createElement('div');
         let low_temp_label = document.createElement('span')

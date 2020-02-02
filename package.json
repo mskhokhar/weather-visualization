@@ -17,6 +17,8 @@
     "url": "https://github.com/mskhokhar/weather-visualization/issues"
   },
   "homepage": "https://github.com/mskhokhar/weather-visualization#readme",
-  "dependencies": {},
+  "dependencies": {
+    "dateformat": "^3.0.3"
+  },
   "devDependencies": {}
 }
