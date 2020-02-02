@@ -1,6 +1,19 @@
 body{
     font-family: 'Comfortaa', cursive;
 }
+.selection{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.user-input{
+    display: flex;
+    flex-direction: column;
+}
+.user-input > div, .user-input > div > input{
+    text-align: center;
+}
 #container {
     height: 400px; 
 }

@@ -25,14 +25,17 @@
     <title>Weather</title>
 </head>
 <body>
-    <div>
-        <label >City
-            <input list="city" id="city-input" class="selected-citya" type="text" />
-        </label>
-        <datalist  id="city"></datalist>
-        <div id="submit-city">Get weather</div>
+    <div class="selection">
+        <div class="user-input">
+            <div>City</div>
+            <div>
+                <input list="city" id="city-input" class="selected-citya" type="text" />
+                <datalist id="city"></datalist>
+            </div>
+            <div id="submit-city">Get weather</div>
+        </div>
+        <div class="weather-tiles"></div>
     </div>
-    <div class="weather-tiles"></div>
     <figure class="highcharts-figure">
         <div id="container" style="max-width: 800px; min-width: 380px; height: 310px; margin: 0 auto">
             <div style="margin-top: 100px; text-align: center" id="loading">
