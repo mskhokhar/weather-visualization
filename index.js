@@ -14,9 +14,16 @@ require('./components/graphs/meteogram');
 
 document.addEventListener('DOMContentLoaded', () => {
   populateCities();
-  document.querySelector("#submit-city").addEventListener("click", () => {      
-    let cityId = document.getElementById("city-input").value;
-    let coord = document.getElementsByClassName(`city-${cityId}`)[0].dataset['dataCoord'];
+  document.querySelector("#submit-city").addEventListener("click", () => { 
+         
+    let cityName = document
+      .querySelector("#city-input")
+      .value
+      .split(" ")
+      .join('')
+    console.log("selected", document.getElementById(`city-input`).name);
+    let coord = document.querySelector(`.city-${cityName}`).dataset["dataCoord"];
+    let cityId = document.querySelector(`.city-${cityName}`).dataset["cityId"];
     fetchWeather(cityId);
     fetchForecast(coord);
     
@@ -27,16 +34,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const populateCities = () => {
     let select = document.getElementById("city");
-    var length = select.options.length;
-    for (i = 0; i < length; i++) {
-      select.options[i] = null;
-    }
 
     cities.forEach(city => {
       let opt = document.createElement("option");
-      opt.classList.add(`city-${city.id}`);
+      let cityName = city.name.split(' ').join('');
+      opt.classList.add(`city-${cityName}`);
       opt.dataset.dataCoord = `lat=${city.coord.lat}&lon=${city.coord.lon}`;
-      opt.value = city.id;
+      opt.dataset.cityId = city.id;
+      opt.value = city.name;
       opt.innerHTML = city.name;
       select.appendChild(opt);
     
