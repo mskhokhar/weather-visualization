@@ -7,8 +7,7 @@ module.exports = (data) => {
 
     let labelContainer = document.createElement('div');
     labelContainer.classList.add('forecast-labels-container')
-    let labels = ['', 'Date', 'Min. Temp', 'Max. Temp', 'Precipitation', 'Pressure',
-'Visibility' ]
+    let labels = ['', 'Date', 'Min. Temp', 'Max. Temp', 'Precipitation', 'Pressure','Visibility' ]
     labels.forEach(label => {
         let labelDiv = document.createElement('div');
         labelDiv.classList.add('forecast-label');

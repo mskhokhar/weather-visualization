@@ -47,13 +47,4 @@ const populateCities = () => {
 
 
 
-// const createDetailedGraph = (data) => {
-//   let graphInput = {};
-//   let inputArray=[];
-//   data.forEach(forecast => {
-//     let forecastData = {};
-//   });
-// }
-
-
 
