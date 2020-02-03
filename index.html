@@ -13,18 +13,11 @@
     <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     
     <script src="./assets/scripts/highcharts.js"></script>
-    
     <script src="./assets/scripts/windBarb.js"></script>
-
     <script src="./assets/scripts/patternFill.js"></script>
-
     <script src="./assets/scripts/exporting.js"></script>
-
     <script src="./assets/scripts/accessibility.js"></script>
-
-    
     <script src="./assets/scripts/seriesLabel.js"></script>
-
     <script src="./assets/scripts/exportData.js"></script>
     <script src="./bundle.js"></script>
 
@@ -33,40 +26,36 @@
 <body>
     <div class="navbar-container">
         <ul class="navbar">
-            <li>Check the weather</li>
-            <li>
-                <img src="./assets/images/Octocat.png" alt="github">
-                <img src="./assets/images/linkedIn_navbar.png" alt="linkedIn">
+            <li class="navbar-title">
+                <div>What's the Weather?</div>
+            </li>
+            <li class="navbar-social">
+                <a href=""><img src="./assets/images/Octocat.png" alt="github"></a>
+                <a href=""><img src="./assets/images/linkedIn_navbar.png" alt="linkedIn"></a>
             </li>
         </ul>
     </div>
     <div class="selection">
         <div class="user-input">
-            <div>City</div>
+            <div class="input-label">Select a city of ur choice:</div>
             <div>
                 <input list="city" id="city-input" class="selected-citya" type="text" />
                 <datalist id="city"></datalist>
             </div>
-            <div id="submit-city">Get weather</div>
-        </div>
-        <div class="weather-tiles"></div>
-    </div>
-    <figure class="highcharts-figure">
-        <div id="container" style="max-width: 800px; min-width: 380px; height: 310px; margin: 0 auto">
-            <div style="margin-top: 100px; text-align: center" id="loading">
-                <i class="fa fa-spinner fa-spin"></i> Please select a city
+            <div id="submit-city">
+                <div class="submit-text">Get weather</div>
             </div>
         </div>
-    </figure>
-    <div>
-        <div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
+    </div>
+    <div class="data">
         <figure class="highcharts-figure">
-            <div id="container-2"></div>
+            <div id="container" style="max-width: 800px; min-width: 380px; height: 310px; margin: 0 auto">
+                <div style="margin-top: 100px; text-align: center" id="loading">
+                    <i class="fa fa-spinner fa-spin"></i> Please select a city
+                </div>
+            </div>
         </figure>
+        <div class="weather-tiles"></div>
     </div>
 </body>
         

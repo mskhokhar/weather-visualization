@@ -1,8 +1,4 @@
 const cities = require('./city.list.json')
-window.cities = cities;
-
-const countries = require('./contry-codes.json');
-window.countries = countries;
 
 
 const fetchForecast = require('./util/weatherbit/fetchForecast');

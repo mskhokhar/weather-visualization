@@ -7,39 +7,83 @@ body{
     justify-content: space-between ;
     /* max-width: 1200px; */
     margin: auto;
- }
- .navbar >li > img {
-     max-width: 40px;
-     min-width: 40px;
-     max-height: 40px;
-     min-height: 40px;
- }
- .navbar-container{
+    padding: 0 30px;
+    width: 75%;
+}
+.navbar > li{
+    display: flex;
+    align-items: center;
+}
+.navbar-title{
+    font-size: xx-large;
+}
+.navbar >li > a > img {
+    max-width: 40px;
+    min-width: 40px;
+    max-height: 40px;
+    min-height: 40px;
+}
+.navbar-container{
     top: 0px;
     width: 100%;
     background-color: white;
     padding-top: 30px;
     position: sticky;
     padding-bottom: 30px;
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.4)
-    /* box-shadow: 0 2px rgba(0, 0, 0, 0.4) */
- }
+    z-index: 1000;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+}
+.navbar-social{
+    display: flex;
+    justify-content: space-evenly;
+    width: 25%;
+}
 .selection{
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    margin-top: 60px;
 }
 .user-input{
     display: flex;
     flex-direction: column;
+    width: 70%;
 }
-.user-input > div, .user-input > div > input{
+.input-label{
+    font-size: x-large;
+    color: rgba(0,0,0,0.54);
+}
+.user-input > div{
     text-align: center;
+}
+.user-input > div > input{
+    text-align: center;
+    width: 80%;
+    margin: 20px 0;
+    border-bottom: 1px solid lightgray;
+    font-size: xx-large;
+    outline: none
+}
+.submit-text{
+    width: 50%;
+    margin: auto;
+    padding: 10px 20px ;
+    border: 1px solid rgba(0,0,0,0.54);
+    border-radius: 5px;
+    color: rgba(0,0,0,0.84);
+    margin-top: 30px;
+}
+.submit-text:hover{
+    cursor: pointer;
+    color: black;
+    border: 1px solid black;
+
 }
 #container {
     height: 400px; 
 }
+
 
 .highcharts-figure, .highcharts-data-table table {
     min-width: 350px; 
@@ -74,10 +118,38 @@ body{
 .highcharts-data-table tr:hover {
     background: #f1f7ff;
 }
-
+.highcharts-figure{
+    width: 100%;
+}
+/* .highcharts-figure svg{
+    z-index: 50;
+} */
 .weather-tiles{
     display: flex;
-    max-width: 60%;
+    flex-wrap: wrap;
+    max-width: 80%;
+    margin-top: 60px;
+    margin-bottom: 60px;
     justify-content: space-evenly;
-    margin: auto;
+}
+.weather-tiles > div{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid rgba(0,0,0,0.84);
+    margin-bottom: 20px;
+    align-items: center;
+    border-radius: 5px;
+    width: 100%;
+    justify-content: space-around;
+}
+.data{
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.weather-tiles > div span, .weather-tiles > div img {
+    /* width: 100%; */
 }
