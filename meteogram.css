@@ -150,6 +150,15 @@ body{
     align-items: center;
 }
 
+.weather-tiles > div > div {
+    width: 100%;
+    /* height: 100%; */
+    text-align: center;
+}
 .weather-tiles > div span, .weather-tiles > div img {
     /* width: 100%; */
+    width: 100%;
 }
+.weather-tiles > div.forecast-labels-container{
+    height: 5rem;
+ }
