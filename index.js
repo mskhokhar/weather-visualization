@@ -17,7 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
       .value
       .split(" ")
       .join('')
-    console.log("selected", document.getElementById(`city-input`).name);
     let coord = document.querySelector(`.city-${cityName}`).dataset["dataCoord"];
     let cityId = document.querySelector(`.city-${cityName}`).dataset["cityId"];
     fetchWeather(cityId);
