@@ -374,7 +374,6 @@ Meteogram.prototype.onChartLoad = function (chart) {
 /**
  * Create the chart. This function is called async when the data file is loaded and parsed.
  */
-console.log('window', window);
 
 Meteogram.prototype.createChart = function () {
 
