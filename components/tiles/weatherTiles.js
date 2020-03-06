@@ -3,9 +3,11 @@ module.exports = (data) => {
 
     let forecastData = data.data;
 
+    console.log('deleting');
     let weatherTiles = document.querySelector('.weather-tiles');
-    weatherTiles.querySelectorAll('*').forEach(n => n.remove());
-
+    while (weatherTiles.hasChildNodes()) {
+        weatherTiles.removeChild(weatherTiles.firstChild);
+    }
     let labelContainer = document.createElement('div');
     labelContainer.classList.add('forecast-labels-container')
     let labels = ['', 'Date', 'Min. Temp', 'Max. Temp', 'Precipitation', 'Pressure','Visibility' ]
