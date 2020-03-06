@@ -3,7 +3,6 @@ module.exports = (cityId) => {
     let request = new XMLHttpRequest();
 
     request.open('GET', `https://api.openweathermap.org/data/2.5/forecast?appid=32414ff520ac014d5e93f3e467a66f39&id=${cityId}&mode=xml&units=metric`, true);
-    console.log('hitting');
 
     request.onload = function () {
         // let data = JSON.parse(this.response);

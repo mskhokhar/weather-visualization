@@ -3,7 +3,6 @@ module.exports = (data) => {
 
     let forecastData = data.data;
 
-    console.log('deleting');
     let weatherTiles = document.querySelector('.weather-tiles');
     while (weatherTiles.hasChildNodes()) {
         weatherTiles.removeChild(weatherTiles.firstChild);
