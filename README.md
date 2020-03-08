@@ -1,7 +1,7 @@
-# weather-visualization
+# Whats the weather?
 
 
-This prroject will be displaying the live weather of the world using different graphs and between different references.
+This project displays weather of any city selected of every 3hours for 5 days graphically and it's 5 days weather forecast.
 
 
 # MVP:
@@ -14,7 +14,7 @@ This prroject will be displaying the live weather of the world using different g
 
 # Technologies, Libraries, APIs:
 
-My project will use js, vanillaDOM, weather api and d3/highcharts.
+My project use js, vanillaDOM, weather api and highcharts.
 
 # Implementation timeline:
 
