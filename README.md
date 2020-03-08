@@ -6,15 +6,25 @@ This project displays weather of any city selected of every 3hours for 5 days gr
 
 # MVP:
 
-  * Graphically represent different comparison types for different areas in city.
+  * Enable user to select any city around the globe.
   
-  * Graphically represent different comparison types for different cities.
+  * Create a meteogram i.e. represent variations of temperature, air pressure, wind-direction, wind-speed and weather condition of a selected city in a single graph for every 3 hours over the time period of 96 hours, strating from current time.
   
-  * Graphically represent different comparison types for different states/provinces.
+  * User can view weather forecast for  next 5 days for the selected city starting from the current day in form tiles.
 
 # Technologies, Libraries, APIs:
 
-My project use js, vanillaDOM, weather api and highcharts.
+  * Technologies :
+    * JavaScript.
+    * Vanilla DOM.
+    * node
+  
+  * Libraries :
+    * Highcharts.
+    
+  * API:
+    * OpenWeatherMap.
+    * WeatherBit.
 
 # Implementation timeline:
 
