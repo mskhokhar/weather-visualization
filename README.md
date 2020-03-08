@@ -26,15 +26,26 @@ This project displays weather of any city selected of every 3hours for 5 days gr
     * OpenWeatherMap.
     * WeatherBit.
 
-# Implementation timeline:
+# To Contribute:
 
-Phase 1: Setup all necessary modules, including getting webpack up and running.  
+To fix a bug or enhance an existing module, follow these steps:
 
-Phase 2: Implement the weather comparison of different cities.
+Fork the repo
 
-Phase 3: Implement the weather comparisons of different states/provinces.
+* Create a new branch (git checkout -b improve-feature)
 
+* Make the appropriate changes in the files
 
-# Wireframe:
+* Add changes to reflect the changes made
 
-![wireframe](https://github.com/mskhokhar/weather-visualization/blob/master/wireframe.png)
+* Commit your changes (git commit -am 'Improve feature')
+
+* Push to the branch (git push origin improve-feature)
+
+* Create a Pull Request
+
+# Local install instructions:
+
+* Open new terminal in the project directory and run the following in sequence:
+  * npm install
+* Run npm start and keep this terminal open (in the project directory)
