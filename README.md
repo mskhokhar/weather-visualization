@@ -3,6 +3,8 @@
 
 This project displays weather of any city selected of every 3hours for 5 days graphically and it's 5 days weather forecast.
 
+![home](https://github.com/mskhokhar/weather-visualization/blob/master/assets/images/weather_readme.gif)
+
 
 # MVP:
 
